@@ -1,5 +1,10 @@
 module.exports = {
+    extensionsToTreatAsEsm: [".ts"],
+    globals: { "ts-jest": { useESM: true } },
     transform: {
-        "\\.[jt]sx?$": "es-jest"
-    }
+        "\\.[jt]sx?$": "ts-jest",
+    },
+    moduleNameMapper: {
+        "^(\\.{1,2}/.*)\\.js$": "$1",
+    },
 };
